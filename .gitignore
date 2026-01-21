@@ -1,0 +1,17 @@
+# Python clutter
+__pycache__/
+*.py[cod]
+*.class
+.venv/
+venv/
+ENV/
+
+# Sensitive Info
+.env
+*.log
+auth.json
+
+# System/Android clutter
+.DS_Store
+.thumbnails/
+.cache/
