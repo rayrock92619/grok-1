@@ -57,3 +57,22 @@ if __name__ == "__main__":
     
     status = send_email(full_report)
     print(status)
+if __name__ == "__main__":
+    # Targeting your specific expertise
+    keywords = "DevOps Engineer Remote"
+    location = "United States"
+    
+    linkedin_leads = scrape_linkedin(keywords, location)
+    
+    # Adding a timestamp so you know exactly when the hunt happened
+    import datetime
+    now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
+    
+    full_report = f"--- SHERLOCK INTELLIGENCE REPORT: {now} ---\n\n"
+    full_report += f"TARGET: {keywords}\n\n"
+    full_report += f"--- LINKEDIN LEADS ---\n\n{linkedin_leads}"
+    
+    print(full_report)
+    
+    status = send_email(full_report)
+    print(status)
